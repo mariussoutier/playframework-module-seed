@@ -1,0 +1,16 @@
+@(errorCount: Long)(implicit request: RequestHeader)
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App Status</title>
+    <link rel="stylesheet" media="screen" href="@com.mariussoutier.play.module.controllers.routes.Assets.versioned("stylesheets/main.css")">
+    <link rel="shortcut icon" type="image/png" href="@com.mariussoutier.play.module.controllers.routes.Assets.versioned("images/favicon.png")">
+  </head>
+  <body>
+
+    <h1>App encountered @errorCount errors so far.</h1>
+
+    <p>Refresh page to update.</p>
+
+  </body>
+</html>
