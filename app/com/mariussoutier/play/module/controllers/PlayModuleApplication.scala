@@ -5,6 +5,7 @@ import javax.inject.{Inject, Named, Singleton}
 import akka.actor.ActorRef
 import akka.util.Timeout
 import com.mariussoutier.play.module.actor.ErrorActor.Protocol.{ErrorCount, GetErrorCount}
+import com.mariussoutier.play.module.component.DatabaseComponent
 import play.api._
 import play.api.mvc._
 
@@ -12,7 +13,8 @@ import scala.concurrent.ExecutionContext
 
 @Singleton
 class PlayModuleApplication @Inject()(configuration: Configuration,
-                                      @Named("error-actor") errorActor: ActorRef)
+                                      @Named("error-actor") errorActor: ActorRef,
+                                      db: DatabaseComponent)
                                      (implicit ec: ExecutionContext)
   extends Controller {
 

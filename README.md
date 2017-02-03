@@ -7,7 +7,3 @@ You can run a module as if it were a Play app by specifying `reference.conf` as 
 
 To write your own module, simply clone this one, change the package from `com.mariussoutier.play` to yours and look for
 everything marked with `TODO`.
- 
-Todos:
-
--[] Compile-time DI 

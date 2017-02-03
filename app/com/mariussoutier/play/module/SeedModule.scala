@@ -1,6 +1,7 @@
 package com.mariussoutier.play.module
 
 import com.mariussoutier.play.module.actor.ErrorActor
+import com.mariussoutier.play.module.component.{DatabaseComponent, DatabaseComponentImpl}
 import play.api.inject.Binding
 import play.api.libs.concurrent.Akka
 import play.api.{Configuration, Environment}
@@ -21,6 +22,7 @@ import play.api.{Configuration, Environment}
 class SeedModule extends play.api.inject.Module {
   // Bind dependency-injected instanced, in this case an Akka actor.
   override def bindings(environment: Environment, configuration: Configuration): Seq[Binding[_]] = Seq(
-    Akka.bindingOf[ErrorActor]("error-actor", _ => ErrorActor.props)
+    Akka.bindingOf[ErrorActor]("error-actor", _ => ErrorActor.props),
+    bind[DatabaseComponent].to[DatabaseComponentImpl]
   )
 }
