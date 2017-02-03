@@ -2,6 +2,10 @@ package com.mariussoutier.play.module.actor
 
 import akka.actor.{Actor, ActorLogging, Props}
 
+/**
+  * Example of an actor used by your module.
+  * TODO Remove if you don't need actors. Otherwise bind them in the Module.
+  */
 class ErrorActor extends Actor with ActorLogging {
 
   import ErrorActor.Protocol._

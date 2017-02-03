@@ -12,8 +12,11 @@ import play.api.{Configuration, Environment, OptionalSourceMapper}
 import scala.concurrent.Future
 
 /**
-  * Enable via:
+  * TODO Remove if you don't need error handling.
+  *
+  * The application that uses this module can either use this error handler by enabling it in application.conf:
   * play.http.errorHandler=com.mariussoutier.play.module.handler.ErrorHandler
+  * or by extending from it.
   */
 @Singleton
 class ErrorHandler @Inject() (

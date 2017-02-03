@@ -1,5 +1,7 @@
-# Routes
-# This file defines all application routes (Higher priority routes first)
+# Module routes
+# TODO Remove if your module doesn't have routes.
+# TODO If it does, rename this file according to your module.
+# The application that uses your module must include these routes via:  ->  /<prefix> <module>.Routes
 # ~~~~
 
 GET        /                    com.mariussoutier.play.module.controllers.PlayModuleApplication.index
