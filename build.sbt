@@ -16,7 +16,7 @@ PlayKeys.devSettings += "play.http.router" -> "module.Routes"
 libraryDependencies ++= Seq(
   filters,
   // WebJars.org (i.e. client-side) dependencies
-  libraryDependencies += "org.webjars" % "bootstrap" % "3.3.7-1"
+  "org.webjars" % "bootstrap" % "3.3.7-1"
 )
 
 // Scala Compiler Options
